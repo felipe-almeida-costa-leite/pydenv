@@ -131,3 +131,4 @@ dmypy.json
 .pydenv
 # Idea
 .idea
+.gitignore
