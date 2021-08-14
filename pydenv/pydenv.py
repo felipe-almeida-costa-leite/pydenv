@@ -70,7 +70,7 @@ def instala_pkgs_pip(pkg: str) -> bool:
     try:
         subprocess.check_call([sys.executable, '-m', 'pip', 'install', pkg])
         return True
-    except:
+    except KeyboardInterrupt:
         return False
 
 
@@ -89,7 +89,7 @@ def install_virtualenv() -> bool:
     try:
         instala_pkgs_pip('virtualenv')
         return True
-    except:
+    except KeyboardInterrupt:
         return False
 
 
@@ -109,7 +109,7 @@ def cria_virtual_env(nome_projeto: str = extrai_nome_projeto()) -> bool:
     try:
         os.system(f'virtualenv .venv --prompt "({nome_projeto}) "')
         return True
-    except:
+    except KeyboardInterrupt:
         return False
 
 
@@ -133,7 +133,7 @@ def activate_virtual_env_and_install_pkg_pip() -> bool:
                   f'pip install pytest &&'
                   f'pip install pre-commit')
         return True
-    except:
+    except KeyboardInterrupt:
         return False
 
 
@@ -171,7 +171,7 @@ def donwload_files_config() -> bool:
             'wget wget https://raw.githubusercontent.com/felipe-almeida-costa-leite/pydenv/main'
             '/.pre-commit-config.yaml')
         return True
-    except:
+    except KeyboardInterrupt:
         return False
 
 
@@ -190,7 +190,7 @@ def install_pre_commit() -> bool:
     try:
         os.system('. .venv/bin/activate && pre-commit install')
         return True
-    except:
+    except KeyboardInterrupt:
         return False
 
 
@@ -208,11 +208,11 @@ def cria_estrutura_diretorios() -> bool:
     try:
         os.system('mkdir src && mkdir build && cd src && mkdir main && mkdir test')
         return True
-    except:
+    except KeyboardInterrupt:
         return False
 
 
-def main() -> bool:
+def run():
     """
     Função que realiza o processo de provisionamento do ambiente
 
@@ -221,27 +221,24 @@ def main() -> bool:
     Return
 
     Example
-        >>> main()
+        >>> run()
         True
 
     """
-    try:
-        logging.info('Iniciando processo de configuração do repositório.')
-        logging.info('Extraindo nome do projeto.')
-        nome = extrai_nome_projeto()
-        logging.info('Checando a instalação do virtualenv.')
-        install_virtualenv()
-        logging.info('Criação do ambiente virtual.')
-        cria_virtual_env(nome)
-        logging.info('Ativação do ambiente virtual.')
-        activate_virtual_env_and_install_pkg_pip()
-        logging.info('Baixando os arquivos padrão.')
-        donwload_files_config()
-        logging.info('Configurando o pre-commit.')
-        install_pre_commit()
-        logging.info('Criando a estrutura de diretórios')
-        cria_estrutura_diretorios()
-        logging.info('Processo finalizado, bom desenvolvimento!')
-        return True
-    except:
-        return False
+
+    logging.info('Iniciando processo de configuração do repositório.')
+    logging.info('Extraindo nome do projeto.')
+    nome = extrai_nome_projeto()
+    logging.info('Checando a instalação do virtualenv.')
+    install_virtualenv()
+    logging.info('Criação do ambiente virtual.')
+    cria_virtual_env(nome)
+    logging.info('Ativação do ambiente virtual.')
+    activate_virtual_env_and_install_pkg_pip()
+    logging.info('Baixando os arquivos padrão.')
+    donwload_files_config()
+    logging.info('Configurando o pre-commit.')
+    install_pre_commit()
+    logging.info('Criando a estrutura de diretórios')
+    cria_estrutura_diretorios()
+    logging.info('Processo finalizado, bom desenvolvimento!')
