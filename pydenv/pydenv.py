@@ -153,22 +153,22 @@ def donwload_files_config() -> bool:
     try:
 
         os.system(
-            'wget https://raw.githubusercontent.com/felipe-almeida-costa-leite/PythonDevelopmentEnvironment/main'
+            'wget https://raw.githubusercontent.com/felipe-almeida-costa-leite/pydenv/main'
             '/.flake8')
         os.system(
-            'wget https://raw.githubusercontent.com/felipe-almeida-costa-leite/PythonDevelopmentEnvironment/main'
+            'wget https://raw.githubusercontent.com/felipe-almeida-costa-leite/pydenv/main'
             '/.pydocstyle.ini')
         os.system(
-            'wget https://raw.githubusercontent.com/felipe-almeida-costa-leite/PythonDevelopmentEnvironment/main'
+            'wget https://raw.githubusercontent.com/felipe-almeida-costa-leite/pydenv/main'
             '/.pylintrc')
         os.system(
-            'wget https://raw.githubusercontent.com/felipe-almeida-costa-leite/PythonDevelopmentEnvironment/main'
+            'wget https://raw.githubusercontent.com/felipe-almeida-costa-leite/pydenv/main'
             '/conftest.py')
         os.system(
-            'wget https://raw.githubusercontent.com/felipe-almeida-costa-leite/PythonDevelopmentEnvironment/main/mypy'
+            'wget https://raw.githubusercontent.com/felipe-almeida-costa-leite/pydenv/main/mypy'
             '.ini')
         os.system(
-            'wget wget https://raw.githubusercontent.com/felipe-almeida-costa-leite/PythonDevelopmentEnvironment/main'
+            'wget wget https://raw.githubusercontent.com/felipe-almeida-costa-leite/pydenv/main'
             '/.pre-commit-config.yaml')
         return True
     except:
