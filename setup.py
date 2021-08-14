@@ -22,9 +22,8 @@ setup(
         'Intended Audience :: Developers',
         'License :: OSI Approved :: MIT License',
         'Natural Language :: Portuguese (Brazilian)',
-        'Operating System :: OS POSIX',
+        'Operating System :: OS Independent',
         'Topic :: Software Development :: Internationalization',
-        'Topic :: Scientific/Engineering :: Physics',
-        'Topic :: Software Development :: Environment'
+        'Topic :: Scientific/Engineering :: Physics'
     ]
 )
