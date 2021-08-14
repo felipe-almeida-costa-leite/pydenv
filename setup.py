@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name = 'pydenv',
-    version = '1.0.1a',
+    version = '1.0.3',
     author = 'Felipe Leite',
     author_email = 'felipecostasilvaleite@hotmail.com',
     packages = ['pydenv'],

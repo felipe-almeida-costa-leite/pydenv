@@ -153,22 +153,22 @@ def donwload_files_config() -> bool:
     try:
 
         os.system(
-            'wget https://raw.githubusercontent.com/felipe-almeida-costa-leite/pydenv/main'
+            'wget https://raw.githubusercontent.com/felipe-almeida-costa-leite/pydenv/main/pydenv/config_files'
             '/.flake8')
         os.system(
-            'wget https://raw.githubusercontent.com/felipe-almeida-costa-leite/pydenv/main'
+            'wget https://raw.githubusercontent.com/felipe-almeida-costa-leite/pydenv/main/pydenv/config_files'
             '/.pydocstyle.ini')
         os.system(
-            'wget https://raw.githubusercontent.com/felipe-almeida-costa-leite/pydenv/main'
+            'wget https://raw.githubusercontent.com/felipe-almeida-costa-leite/pydenv/main/pydenv/config_files'
             '/.pylintrc')
         os.system(
-            'wget https://raw.githubusercontent.com/felipe-almeida-costa-leite/pydenv/main'
+            'wget https://raw.githubusercontent.com/felipe-almeida-costa-leite/pydenv/main/pydenv/config_files'
             '/conftest.py')
         os.system(
-            'wget https://raw.githubusercontent.com/felipe-almeida-costa-leite/pydenv/main/mypy'
+            'wget https://raw.githubusercontent.com/felipe-almeida-costa-leite/pydenv/main/pydenv/config_files/mypy'
             '.ini')
         os.system(
-            'wget wget https://raw.githubusercontent.com/felipe-almeida-costa-leite/pydenv/main'
+            'wget wget https://raw.githubusercontent.com/felipe-almeida-costa-leite/pydenv/main/pydenv/config_files'
             '/.pre-commit-config.yaml')
         return True
     except KeyboardInterrupt:
