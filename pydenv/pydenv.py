@@ -245,11 +245,3 @@ def main() -> bool:
         return True
     except:
         return False
-
-
-if __name__ == '__main__':
-    response = main()
-    if response:
-        logging.info('OK')
-    else:
-        logging.info('Consultar arquivo de log')
