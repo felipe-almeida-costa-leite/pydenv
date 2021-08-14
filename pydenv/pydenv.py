@@ -124,7 +124,6 @@ def activate_virtual_env_and_install_pkg_pip() -> bool:
     """
     try:
         os.system(f'. .venv/bin/activate &&'
-                  f'pip install lint &&'
                   f'pip install flake8 &&'
                   f'pip install pylint &&'
                   f'pip install black &&'
